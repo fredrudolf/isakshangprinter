@@ -136,7 +136,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "Hangprinter"
+#define CUSTOM_MACHINE_NAME "Isaks motherflippin Hangprinter v3.3"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -380,10 +380,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Hangprinter (Volcano, e3d V6, RAMPS, 120W power supply)
-  #define  DEFAULT_Kp 39.76
-  #define  DEFAULT_Ki 3.26
-  #define  DEFAULT_Kd 121.18
+  // Hangprinter (Super Volcano copper with isolation, titan aero, RAMPS, 360W power supply)
+  #define DEFAULT_Kp 38.36
+  #define DEFAULT_Ki 3.63
+  #define DEFAULT_Kd 101.36
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -567,17 +567,17 @@
      * Default buildup factor for 0.39 mm FireLine: 0.00475
      * In practice you might want to compensate a bit more or a bit less
      */
-    #define SPOOL_BUILDUP_FACTOR 0.0078
+    #define SPOOL_BUILDUP_FACTOR 0.00475
 
     /**
      * Total length of lines on each spool
      * Default assumes all nine lines are cut to length 7500 mm.
      * Change to whatever length you have cut your different lines to.
      */
-    #define MOUNTED_LINE { 7500.0, 7500.0, 7500.0, 4000.0 }
+    #define MOUNTED_LINE { 7200.0, 7200.0, 7200.0, 4700.0 }
 
     // Measuring your spool radii and adjusting this number will improve your Hangprinter's precision
-    #define SPOOL_RADII { 55.0, 55.0, 55.0, 55.0 }
+    #define SPOOL_RADII { 54.8, 54.75, 54.75, 54.75 }
 
     // Used for calculating steps per spool radian and the static steps per mm used in acceleration planning
     #define MOTOR_GEAR_TEETH { 10, 10, 10, 10 }
@@ -685,7 +685,7 @@
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
-//#define E0_DRIVER_TYPE A4988
+#define E0_DRIVER_TYPE TMC2130_STANDALONE
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -981,9 +981,9 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_A_DIR false
-#define INVERT_B_DIR true
+#define INVERT_B_DIR false
 #define INVERT_C_DIR false
-#define INVERT_D_DIR false
+#define INVERT_D_DIR true
 
 #define INVERT_X_DIR INVERT_A_DIR
 #define INVERT_Y_DIR INVERT_B_DIR

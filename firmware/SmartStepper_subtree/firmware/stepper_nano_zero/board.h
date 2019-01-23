@@ -15,7 +15,7 @@
 #include <Arduino.h>
 
 //uncomment this if you are using the Mechaduino hardware
-//#define MECHADUINO_HARDWARE
+#define MECHADUINO_HARDWARE
 
 //uncomment this if you will be using Hangprinter's TWI/i2c interface
 #define HP_I2C
@@ -62,7 +62,7 @@
 
 //This section is for using the step and dir pins as serial port
 // when the enable pin is inactive.
-#define USE_STEP_DIR_SERIAL
+//#define USE_STEP_DIR_SERIAL
 #define STEP_DIR_BAUD (19200) //this is the baud rate we will use
 
 // These are used as an attempt to use TC4 to count steps
